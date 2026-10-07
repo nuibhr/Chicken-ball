@@ -1,113 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --color-lime: #B8F23A;
-  --color-deep-navy: #111827;
-  --color-court-green: #1B4332;
-  --color-kitchen-green: #2D6A4F;
-  --color-orange: #FF8A3D;
-  --color-line-green: #06C755;
+  font-family: 'Anuphan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #152019;
+  background: #f5f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  background: #f5f7f2;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Anuphan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  overflow: hidden;
-  user-select: none;
-  background-color: #080f0c;
-  color: #F8FAF6;
   margin: 0;
-  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f7f2;
+  color: #152019;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.font-pixel {
-  font-family: 'Press Start 2P', monospace;
+button,
+input {
+  font: inherit;
 }
 
-/* Retro 8-bit Pokémon Window Borders */
-.pokemon-window {
-  background: #f8f9fa;
-  border: 4px solid #222;
-  box-shadow: 
-    inset -4px -4px 0px #ced4da,
-    inset 4px 4px 0px #ffffff,
-    4px 4px 0px #0a0a0a;
-  image-rendering: pixelated;
+button {
+  cursor: pointer;
 }
 
-.pokemon-window-dark {
-  background: rgba(17, 24, 39, 0.94);
-  border: 3px solid #B8F23A;
-  box-shadow: 
-    inset -3px -3px 0px #0e1520,
-    inset 3px 3px 0px rgba(184, 242, 58, 0.4),
-    4px 4px 0px #000000;
+button:disabled {
+  cursor: default;
 }
 
-.pokemon-card {
-  background: rgba(15, 23, 42, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 3px 3px 0px #000;
+* {
+  box-sizing: border-box;
 }
 
-.pixel-badge {
-  box-shadow: 2px 2px 0 #000;
-  image-rendering: pixelated;
+::selection {
+  background: #b8f23a;
+  color: #17251f;
 }
 
-.hp-bar-bg {
-  background: #374151;
-  border: 1.5px solid #111827;
-  border-radius: 2px;
-  padding: 1px;
-}
-
-.hp-bar-fill {
-  background: linear-gradient(to bottom, #4ade80, #16a34a);
-  height: 6px;
-  border-radius: 1px;
-  transition: width 0.3s ease-out;
-}
-
-.glass-panel {
-  background: rgba(17, 24, 39, 0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 2px solid rgba(184, 242, 58, 0.35);
-  box-shadow: 4px 4px 0px #000;
-}
-
-.glass-pill {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* Retro CRT scanline effect (optional subtle overlay) */
-.crt-overlay::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-  z-index: 50;
-  background-size: 100% 3px, 6px 100%;
-  pointer-events: none;
-  opacity: 0.4;
-}
-
-/* Custom scrollbar for retro panels */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #111827;
-}
-::-webkit-scrollbar-thumb {
-  background: #374151;
-  border: 1px solid #4b5563;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #B8F23A;
+  width: 8px;
+  height: 8px;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccd6ce;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9b8ad;
+}
